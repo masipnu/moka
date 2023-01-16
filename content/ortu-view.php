@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Data Guru
+        Data Orang Tua/ Wali
         <small></small>
       </h1>
     </section>
@@ -24,10 +24,10 @@
                 <thead>
                 <tr>
                   <th>No.</th>
-                  <th>Foto</th>
-                  <th>Id. Guru</th>
+                  <th>Id. Ortu</th>
                   <th>Nama</th>
-                  <th>Jenis Kelamin</th>
+                  <th>Status</th>
+                  <th>Nama Siswa</th>
                   <th>Whatsapp</th>
                   <th>Username</th>
                   <th>Aksi</th>
@@ -35,26 +35,17 @@
                 </thead>
                 <tbody>
 <?php
-$query = mysqli_query($con, "SELECT * FROM view_guru_all");
+$query = mysqli_query($con, "SELECT * FROM view_ortu_all");
 $no = 0;
 while($data = mysqli_fetch_array($query)){
 $no++;
 ?>
                 <tr>
                   <td><?= $no ?></td>
-                  <td><img src="images/<?= $data['foto'] ?>" alt="" height="50px"></td>
-                  <td><?= $data['id_guru'] ?></td>
-                  <td><?= $data['nama'] ?></td>
-                  <td>
-                    <!-- fungsi covert jeniis kelamin -->
-                        <?php if ($data['jk']=="L") {
-                                echo  "Laki-laki";
-                              }elseif ($data['jk']=="P") {
-                                echo "Perempuan";
-                              }else {
-                                echo "N/A";
-                              } ?>
-                  </td>
+                  <td><?= $data['id_ortu'] ?></td>
+                  <td><?= $data['nama_ortu'] ?></td>
+                  <td><?= $data['status'] ?></td>
+                  <td><?= $data['nama_siswa'] ?></td>
                   <td><a class="btn btn-sm btn-success" href="https://wa.me/<?= $data['no_hp'] ?>"><i class="fa fa-whatsapp"></i> </td>
                   <td><?= $data['username'] ?></td>
                   <td>

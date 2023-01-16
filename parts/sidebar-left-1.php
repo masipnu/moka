@@ -72,9 +72,9 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-user"></i> Data Guru</a></li>
-            <li><a href="#"><i class="fa fa-user"></i> Data Siswa</a></li>
-            <li><a href="#"><i class="fa fa-user"></i> Data Orang Tua</a></li>
+            <li><a href="?hal=guru-view"><i class="fa fa-user"></i> Data Guru</a></li>
+            <li><a href="?hal=siswa-view"><i class="fa fa-user"></i> Data Siswa</a></li>
+            <li><a href="?hal=ortu-view"><i class="fa fa-user"></i> Data Orang Tua</a></li>
           </ul>
         </li>
 

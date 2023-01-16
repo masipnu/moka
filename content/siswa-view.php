@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Data Guru
+        Data Siswa
         <small></small>
       </h1>
     </section>
@@ -25,17 +25,17 @@
                 <tr>
                   <th>No.</th>
                   <th>Foto</th>
-                  <th>Id. Guru</th>
+                  <th>No. Induk</th>
                   <th>Nama</th>
                   <th>Jenis Kelamin</th>
-                  <th>Whatsapp</th>
-                  <th>Username</th>
+                  <th>Kelas</th>
+                  <th>Kompetensi Keahlian</th>
                   <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
 <?php
-$query = mysqli_query($con, "SELECT * FROM view_guru_all");
+$query = mysqli_query($con, "SELECT * FROM view_siswa_all");
 $no = 0;
 while($data = mysqli_fetch_array($query)){
 $no++;
@@ -43,7 +43,7 @@ $no++;
                 <tr>
                   <td><?= $no ?></td>
                   <td><img src="images/<?= $data['foto'] ?>" alt="" height="50px"></td>
-                  <td><?= $data['id_guru'] ?></td>
+                  <td><?= $data['nis'] ?></td>
                   <td><?= $data['nama'] ?></td>
                   <td>
                     <!-- fungsi covert jeniis kelamin -->
@@ -55,11 +55,11 @@ $no++;
                                 echo "N/A";
                               } ?>
                   </td>
-                  <td><a class="btn btn-sm btn-success" href="https://wa.me/<?= $data['no_hp'] ?>"><i class="fa fa-whatsapp"></i> </td>
-                  <td><?= $data['username'] ?></td>
+                  <td><?= $data['nama_kelas'] ?></td>
+                  <td><?= $data['nama_komli'] ?></td>
                   <td>
-                    <a class="btn btn-sm btn-info disabled" href="?hal=guru-edit&id=<?= $data['id_guru'] ?>"> <i class="oi oi-pencil"></i> Edit </a>
-                    <a class="btn btn-sm btn-danger disabled" href="?hal=guru-delete&id=<?= $data['id_guru'] ?>"> <i class="oi oi-trash"></i> Hapus </a>
+                    <a class="btn btn-sm btn-info disabled" href="?hal=siswa-edit&id=<?= $data['id_siswa'] ?>"> <i class="oi oi-pencil"></i> Edit </a>
+                    <a class="btn btn-sm btn-danger disabled" href="?hal=siswa-delete&id=<?= $data['id_siswa'] ?>"> <i class="oi oi-trash"></i> Hapus </a>
                   </td>
                 </tr>
 <?php

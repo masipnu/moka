@@ -18,6 +18,7 @@
                $_SESSION['role'] = $data['id_role'];
                $_SESSION['nama_role'] = $data['nama_role'];
                $_SESSION['nama'] = $data['nama'];
+$_SESSION['foto'] = $data['foto'];
                header('location: index.php');
          }else{
             echo "<head>";
@@ -42,6 +43,7 @@
                $_SESSION['role'] = $data['id_role'];
                $_SESSION['nama_role'] = $data['nama_role'];
                $_SESSION['nama'] = $data['nama'];
+$_SESSION['foto'] = $data['foto'];
                header('location: index.php');
          }else{
             echo "<head>";
@@ -66,6 +68,7 @@
                $_SESSION['role'] = $data['id_role'];
                $_SESSION['nama_role'] = $data['nama_role'];
                $_SESSION['nama'] = $data['nama'];
+$_SESSION['foto'] = $data['foto'];
                header('location: index.php');
          }else{
             echo "<head>";
@@ -90,6 +93,7 @@
                $_SESSION['role'] = $data['id_role'];
                $_SESSION['nama_role'] = $data['nama_role'];
                $_SESSION['nama'] = $data['nama'];
+$_SESSION['foto'] = $data['foto'];
                header('location: index.php');
          }else{
             echo "<head>";
@@ -113,6 +117,7 @@
                $_SESSION['role'] = $data['id_role'];
                $_SESSION['nama_role'] = $data['nama_role'];
                $_SESSION['nama'] = $data['nama'];
+$_SESSION['foto'] = $data['foto'];
                header('location: index.php');
          }else{
             echo "<head>";
@@ -136,6 +141,7 @@
                $_SESSION['role'] = $data['id_role'];
                $_SESSION['nama_role'] = $data['nama_role'];
                $_SESSION['nama'] = $data['nama'];
+$_SESSION['foto'] = $data['foto'];
                header('location: index.php');
          }else{
             echo "<head>";
