@@ -34,9 +34,9 @@
         <!-- <li class="header">HEADER</li> -->
 
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li><a href="?hal=dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
 
-        <li><a href="#"><i class="fa fa-building"></i> <span>Identitas Sekolah</span></a></li>
+        <li><a href="?hal=identitas-sekolah-view"><i class="fa fa-building"></i> <span>Identitas Sekolah</span></a></li>
 
         <li class="treeview">
           <a href="#"><i class="fa fa-book"></i> <span>Presensi</span>
@@ -45,12 +45,12 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-pencil-square-o"></i> Guru</a></li>
+            <!-- <li><a href="#"><i class="fa fa-pencil-square-o"></i> Guru</a></li> -->
             <li><a href="#"><i class="fa fa-pencil-square-o"></i> Siswa</a></li>
           </ul>
         </li>
 
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#"><i class="fa fa-book"></i> <span>Pengaturan KBM</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -60,9 +60,9 @@
             <!-- <li><a href="#"><i class="fa fa-bookmark"></i> Jurusan</a></li>
             <li><a href="#"><i class="fa fa-bookmark"></i> Kelas</a></li>
             <li><a href="#"><i class="fa fa-bookmark"></i> Mata Pelajaran</a></li> -->
-            <li><a href="#"><i class="fa fa-bookmark"></i> Jadwal Pelajaran</a></li>
+            <!-- <li><a href="#"><i class="fa fa-bookmark"></i> Jadwal Pelajaran</a></li>
           </ul>
-        </li>
+        </li> --> 
 
         <li class="treeview">
           <a href="#"><i class="fa fa-users"></i> <span>Master Data</span>
@@ -71,7 +71,7 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-user"></i> Data Guru</a></li>
+            <!-- <li><a href="#"><i class="fa fa-user"></i> Data Guru</a></li> -->
             <li><a href="#"><i class="fa fa-user"></i> Data Siswa</a></li>
             <li><a href="#"><i class="fa fa-user"></i> Data Orang Tua</a></li>
           </ul>
