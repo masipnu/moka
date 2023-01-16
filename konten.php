@@ -94,7 +94,14 @@
       "user-add",
       "user-edit",
       "user-update",
-      "user-delete"
+      "user-delete",
+      // presensi-siswa
+      "presensi-siswa-view",
+      "presensi-siswa-tambah",
+      "presensi-siswa-add",
+      "presensi-siswa-edit",
+      "presensi-siswa-update",
+      "presensi-siswa-delete"
    ];
 
    if(isset($_GET['hal'])) $hal = $_GET['hal'];

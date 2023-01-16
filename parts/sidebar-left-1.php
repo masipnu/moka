@@ -46,8 +46,8 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-pencil-square-o"></i> Guru</a></li>
-            <li><a href="#"><i class="fa fa-pencil-square-o"></i> Siswa</a></li>
+            <li ><a href="?hal=presensi-guru-view"><i class="fa fa-pencil-square-o"></i> Guru</a></li>
+            <li><a href="?hal=presensi-siswa-view"><i class="fa fa-pencil-square-o"></i> Siswa</a></li>
           </ul>
         </li>
 

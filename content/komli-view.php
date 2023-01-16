@@ -16,7 +16,7 @@
 
         <div class="box">
             <div class="box-header">
-            <a class="btn btn-info" href="?hal=komli-tambah"><i class="fa fa-plus"></i>  Tambah</a>
+            <a class="btn btn-info disabled" href="?hal=komli-tambah"><i class="fa fa-plus"></i>  Tambah</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body no-padding">
@@ -24,7 +24,7 @@
                 <tr>
                   <th class="text-center" style="width: 10px">No.</th>
                   <th class="text-center">Nama Kompetensi Keahlian</th>
-                  <th class="text-center" style="width: 40px">Prosentase</th>
+                  <th class="text-center" style="width: 40px">Jumlah Siswa</th>
                   <th class="text-center">Aksi</th>
                 </tr>
 
@@ -37,10 +37,17 @@ $no++;
                 <tr>
                   <td class="text-center"><?= $no ?></td>
                   <td><?= $data['nama_komli'] ?></td>
-                  <td class="text-center"><span class="badge bg-red"><?= $data['prosentase'] ?> %</span></td>
                   <td class="text-center">
-                  <a class="btn btn-sm btn-info" href="?hal=komli-edit&id=<?= $data['id_komli'] ?>"> <i class="oi oi-pencil"></i> Edit </a>
-                <a class="btn btn-sm btn-danger" href="?hal=komli-delete&id=<?= $data['id_komli'] ?>"> <i class="oi oi-trash"></i> Hapus </a>
+                  <!-- menampilkan jumlah populasi siswa per komli -->
+                    <?php
+                    $id_komli=$data['id_komli'];
+                    $pop = mysqli_num_rows(mysqli_query($con, "SELECT * FROM siswa JOIN kelas using (id_kelas) join komli using (id_komli) WHERE id_komli=$id_komli"));
+                    echo $pop;
+                    ?>
+                  </td>
+                  <td class="text-center">
+                  <a class="btn btn-sm btn-info disabled" href="?hal=komli-edit&id=<?= $data['id_komli'] ?>"> <i class="oi oi-pencil"></i> Edit </a>
+                <a class="btn btn-sm btn-danger disabled" href="?hal=komli-delete&id=<?= $data['id_komli'] ?>"> <i class="oi oi-trash"></i> Hapus </a>
                   </td>
                 </tr>
 <?php

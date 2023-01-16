@@ -570,3 +570,28 @@ where kelas.nama_kelas="XII"
 and hari.id_hari=6
 and komli.nama_komli="Perbankan Syariah"
 order by id_kbm asc;
+
+
+-- pop_x_rpl
+CREATE VIEW pop_x_rpl AS
+SELECT COUNT(id_kelas) FROM siswa WHERE id_kelas=11
+
+-- pop_x_pbs
+CREATE VIEW pop_x_pbs AS
+SELECT COUNT(id_kelas) FROM siswa WHERE id_kelas=12
+
+-- pop_xi_rpl
+CREATE VIEW pop_xi_rpl AS
+SELECT COUNT(id_kelas) FROM siswa WHERE id_kelas=13
+
+-- pop_xi_pbs
+CREATE VIEW pop_xi_pbs AS
+SELECT COUNT(id_kelas) FROM siswa WHERE id_kelas=14
+
+-- pop_xii_rpl
+CREATE VIEW pop_xii_rpl AS
+SELECT COUNT(id_kelas) FROM siswa WHERE id_kelas=15
+
+-- pop_xii_pbs
+CREATE VIEW pop_xii_pbs AS
+SELECT COUNT(id_kelas) FROM siswa WHERE id_kelas=16
