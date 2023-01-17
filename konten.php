@@ -101,7 +101,14 @@
       "presensi-siswa-add",
       "presensi-siswa-edit",
       "presensi-siswa-update",
-      "presensi-siswa-delete"
+      "presensi-siswa-delete",
+      // tugas-mengajar
+      "tugas-mengajar-view",
+      "tugas-mengajar-tambah",
+      "tugas-mengajar-add",
+      "tugas-mengajar-edit",
+      "tugas-mengajar-update",
+      "tugas-mengajar-delete"
    ];
 
    if(isset($_GET['hal'])) $hal = $_GET['hal'];

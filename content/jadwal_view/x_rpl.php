@@ -12,7 +12,8 @@
         <li><a href="#xrpl_kamis" data-toggle="tab">Kamis</a></li>
         <li><a href="#xrpl_jumat" data-toggle="tab">Jum'at</a></li>
         <li><a href="#xrpl_sabtu" data-toggle="tab">Sabtu</a></li>
-        <!-- <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li> -->
+        <!-- link untuk tombol ini masih error -->
+        <!-- <li class="pull-right"><a href="?hal=jadwal-tambah" class="text-muted"><i class="fa fa-gear"></i></a></li> -->
       </ul>
       <div class="tab-content">
         <div class="tab-pane active" id="xrpl_senin">

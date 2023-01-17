@@ -5,6 +5,7 @@
       <h1>
         Jadwal Pelajaran
         <small></small>
+       <a class="pull-right" href="?hal=jadwal-tambah" class="text-muted"><i class="fa fa-gear"></i></a>
       </h1>
     </section>
 

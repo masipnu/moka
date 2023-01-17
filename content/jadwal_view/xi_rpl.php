@@ -23,6 +23,7 @@
                 <th>Jam ke</th>
                   <th >Mata Pelajaran</th>
                   <th >Guru</th>
+                  <th>Aksi</th>
                 </tr>
                 <?php
 $query = mysqli_query($con, "SELECT * FROM view_jadwal_xi_rpl_1");
@@ -34,6 +35,11 @@ $no++;
                   <td ><?= $data['nama_jamke'] ?></td>
                   <td ><?= $data['nama_mapel'] ?></td>
                   <td ><?= $data['nama'] ?></td>
+                  <td>
+                    <a class="btn btn-sm btn-danger" href="?hal=jadwal-delete&id=<?= $data['id_jadwal'] ?>">
+                    <i class="fa fa-eraser"></i>
+                  </a>
+                  </td>
                 </tr>
 <?php
 }
@@ -51,6 +57,7 @@ $no++;
                 <th>Jam ke</th>
                   <th >Mata Pelajaran</th>
                   <th >Guru</th>
+                  <th>Aksi</th>
                 </tr>
                 <?php
 $query = mysqli_query($con, "SELECT * FROM view_jadwal_xi_rpl_2");
@@ -62,6 +69,11 @@ $no++;
                   <td ><?= $data['nama_jamke'] ?></td>
                   <td ><?= $data['nama_mapel'] ?></td>
                   <td ><?= $data['nama'] ?></td>
+                  <td>
+                    <a class="btn btn-sm btn-danger" href="?hal=jadwal-delete&id=<?= $data['id_jadwal'] ?>">
+                    <i class="fa fa-eraser"></i>
+                  </a>
+                  </td>
                 </tr>
 <?php
 }
@@ -78,6 +90,7 @@ $no++;
                 <th>Jam ke</th>
                   <th >Mata Pelajaran</th>
                   <th >Guru</th>
+                  <th>Aksi</th>
                 </tr>
                 <?php
 $query = mysqli_query($con, "SELECT * FROM view_jadwal_xi_rpl_3");
@@ -89,6 +102,11 @@ $no++;
                   <td ><?= $data['nama_jamke'] ?></td>
                   <td ><?= $data['nama_mapel'] ?></td>
                   <td ><?= $data['nama'] ?></td>
+                  <td>
+                    <a class="btn btn-sm btn-danger" href="?hal=jadwal-delete&id=<?= $data['id_jadwal'] ?>">
+                    <i class="fa fa-eraser"></i>
+                  </a>
+                  </td>
                 </tr>
 <?php
 }
@@ -105,6 +123,7 @@ $no++;
                 <th>Jam ke</th>
                   <th >Mata Pelajaran</th>
                   <th >Guru</th>
+                  <th>Aksi</th>
                 </tr>
                 <?php
 $query = mysqli_query($con, "SELECT * FROM view_jadwal_xi_rpl_4");
@@ -116,6 +135,11 @@ $no++;
                   <td ><?= $data['nama_jamke'] ?></td>
                   <td ><?= $data['nama_mapel'] ?></td>
                   <td ><?= $data['nama'] ?></td>
+                  <td>
+                    <a class="btn btn-sm btn-danger" href="?hal=jadwal-delete&id=<?= $data['id_jadwal'] ?>">
+                    <i class="fa fa-eraser"></i>
+                  </a>
+                  </td>
                 </tr>
 <?php
 }
@@ -132,6 +156,7 @@ $no++;
                 <th>Jam ke</th>
                   <th >Mata Pelajaran</th>
                   <th >Guru</th>
+                  <th>Aksi</th>
                 </tr>
                 <?php
 $query = mysqli_query($con, "SELECT * FROM view_jadwal_xi_rpl_5");
@@ -143,6 +168,11 @@ $no++;
                   <td ><?= $data['nama_jamke'] ?></td>
                   <td ><?= $data['nama_mapel'] ?></td>
                   <td ><?= $data['nama'] ?></td>
+                  <td>
+                    <a class="btn btn-sm btn-danger" href="?hal=jadwal-delete&id=<?= $data['id_jadwal'] ?>">
+                    <i class="fa fa-eraser"></i>
+                  </a>
+                  </td>
                 </tr>
 <?php
 }
@@ -159,6 +189,7 @@ $no++;
                 <th>Jam ke</th>
                   <th >Mata Pelajaran</th>
                   <th >Guru</th>
+                  <th>Aksi</th>
                 </tr>
                 <?php
 $query = mysqli_query($con, "SELECT * FROM view_jadwal_xi_rpl_6");
@@ -170,6 +201,11 @@ $no++;
                   <td ><?= $data['nama_jamke'] ?></td>
                   <td ><?= $data['nama_mapel'] ?></td>
                   <td ><?= $data['nama'] ?></td>
+                  <td>
+                    <a class="btn btn-sm btn-danger" href="?hal=jadwal-delete&id=<?= $data['id_jadwal'] ?>">
+                    <i class="fa fa-eraser"></i>
+                  </a>
+                  </td>
                 </tr>
 <?php
 }

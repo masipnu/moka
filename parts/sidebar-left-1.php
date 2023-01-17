@@ -46,7 +46,7 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li ><a href="?hal=presensi-guru-view"><i class="fa fa-pencil-square-o"></i> Guru</a></li>
+            <li ><a href="#"><i class="fa fa-pencil-square-o"></i> Guru</a></li>
             <li><a href="?hal=presensi-siswa-view"><i class="fa fa-pencil-square-o"></i> Siswa</a></li>
           </ul>
         </li>
@@ -61,6 +61,7 @@
             <li><a href="?hal=komli-view"><i class="fa fa-bookmark"></i> Kompetensi Keahlian</a></li>
             <li><a href="?hal=kelas-view"><i class="fa fa-bookmark"></i> Kelas</a></li>
             <li><a href="?hal=mapel-view"><i class="fa fa-bookmark"></i> Mata Pelajaran</a></li>
+            <li><a href="?hal=tugas-mengajar-view"><i class="fa fa-bookmark"></i> Pembagian Tugas Mengajar</a></li>
             <li><a href="?hal=jadwal-view"><i class="fa fa-bookmark"></i> Jadwal Pelajaran</a></li>
           </ul>
         </li>
