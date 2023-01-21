@@ -6,7 +6,10 @@
       <div class="row">
 
 <?php
-
+var_dump($_POST['id_mengajar']);
+echo "<br>";
+echo "<hr>";
+echo "<br>";
 var_dump($_POST['tgl']);
 echo "<br>";
 echo "<hr>";
@@ -15,7 +18,7 @@ var_dump($_POST['id_siswa']);
 echo "<br>";
 echo "<hr>";
 echo "<br>";
-var_dump($_POST['presensi']);
+var_dump($_POST['id_presensi']);
 echo "<br>";
 echo "<hr>";
 echo "<br>";
