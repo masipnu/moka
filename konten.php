@@ -102,6 +102,7 @@
       "presensi-siswa-edit",
       "presensi-siswa-update",
       "presensi-siswa-delete",
+      "presensi-siswa-test",
       // tugas-mengajar
       "tugas-mengajar-view",
       "tugas-mengajar-tambah",

@@ -14,7 +14,7 @@
 
                 <p>
                   <?= $_SESSION['nama']; ?>
-                  <small><?= $_SESSION['nama_role']; ?></small>
+                  <small><?= $_SESSION['id_guru']." | ".$_SESSION['nama_role']; ?></small>
                 </p>
               </li>
               <!-- Menu Body -->
