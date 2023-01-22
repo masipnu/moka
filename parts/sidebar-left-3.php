@@ -60,7 +60,7 @@
             <!-- <li><a href="#"><i class="fa fa-bookmark"></i> Jurusan</a></li>
             <li><a href="#"><i class="fa fa-bookmark"></i> Kelas</a></li>
             <li><a href="#"><i class="fa fa-bookmark"></i> Mata Pelajaran</a></li> -->
-            <li><a href="#"><i class="fa fa-bookmark"></i> Jadwal Pelajaran</a></li>
+            <li><a href="?hal=jadwal-view"><i class="fa fa-bookmark"></i> Jadwal Pelajaran</a></li>
           </ul>
         </li>
 

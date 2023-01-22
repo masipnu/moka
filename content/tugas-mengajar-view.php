@@ -19,7 +19,7 @@
               <a class="btn btn-info" href="?hal=tugas-mengajar-tambah"><i class="fa fa-plus"></i>  Tambah</a>
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>

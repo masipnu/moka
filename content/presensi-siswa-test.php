@@ -6,7 +6,7 @@
       <div class="row">
 
 <?php
-var_dump($_POST['id_mengajar']);
+var_dump($_POST['id_mengajars']);
 echo "<br>";
 echo "<hr>";
 echo "<br>";

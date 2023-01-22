@@ -5,42 +5,55 @@
       <h1>
         Jadwal Pelajaran
         <small></small>
-       <a class="pull-right" href="?hal=jadwal-tambah" class="text-muted"><i class="fa fa-gear"></i></a>
-      </h1>
-    </section>
+        <a class="pull-right" href="
+        <?php
+        // fungsi untuk menonaktifkan tomboltambah jadwal
+        // jika role-nya selain admin
+        $role = intval($_SESSION['role']);
+        if ($role == 1) {
+          echo '?hal=jadwal-tambah';
+        } else  {
+          echo  '#';
+        }
+       ?>
+        " class="text-muted"
 
-        <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
+       ><i class="fa fa-gear"></i></a>
+     </h1>
+   </section>
 
-      <!-- START CUSTOM TABS -->
-      <div class="row">
+   <!-- Main content -->
+   <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
 
-        <!-- include jadwal x-rpl -->
-        <?php include "jadwal_view/x_rpl.php"; ?>
+        <!-- START CUSTOM TABS -->
+        <div class="row">
 
-        <!-- include jadwal x-rpl -->
-        <?php include "jadwal_view/x_pbs.php"; ?>
+          <!-- include jadwal x-rpl -->
+          <?php include "jadwal_view/x_rpl.php"; ?>
 
-        <!-- include jadwal x-rpl -->
-        <?php include "jadwal_view/xi_rpl.php"; ?>
+          <!-- include jadwal x-rpl -->
+          <?php include "jadwal_view/x_pbs.php"; ?>
 
-        <!-- include jadwal x-rpl -->
-        <?php include "jadwal_view/xi_pbs.php"; ?>
+          <!-- include jadwal x-rpl -->
+          <?php include "jadwal_view/xi_rpl.php"; ?>
 
-        <!-- include jadwal x-rpl -->
-        <?php include "jadwal_view/xii_rpl.php"; ?>
-        
-        <!-- include jadwal x-rpl -->
-        <?php include "jadwal_view/xii_pbs.php"; ?>
+          <!-- include jadwal x-rpl -->
+          <?php include "jadwal_view/xi_pbs.php"; ?>
 
-      </div>
-      <!-- /.row -->
-    </section>
-    <!-- /.content -->
+          <!-- include jadwal x-rpl -->
+          <?php include "jadwal_view/xii_rpl.php"; ?>
+
+          <!-- include jadwal x-rpl -->
+          <?php include "jadwal_view/xii_pbs.php"; ?>
+
+        </div>
+        <!-- /.row -->
+      </section>
+      <!-- /.content -->
+
+    </div>
+    <!-- /.content-wrapper -->
 
   </div>
-  <!-- /.content-wrapper -->
-
-</div>

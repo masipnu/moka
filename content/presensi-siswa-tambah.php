@@ -27,22 +27,26 @@
           <?php
           $id_guru=$_SESSION['id_guru'];
           $sql = "SELECT 
-          siswa.id_siswa,
-          siswa.nama,
-          siswa.nis,
-          siswa.foto,
-          mapel.id_mapel,
-          mapel.nama_mapel,
-          mengajar.id_mengajar
-          from siswa
-          join mapel using(id_kelas)
-          join mengajar using(id_mapel)
-          where id_mengajar=(SELECT id_mengajar from view_id_mengajar_today)
-          and id_guru='$id_guru'";
+siswa.id_siswa,
+siswa.nama,
+siswa.nis,
+siswa.foto,
+mapel.id_mapel,
+mapel.nama_mapel,
+mengajar.id_mengajar
+from siswa
+join mapel using(id_kelas)
+join mengajar using(id_mapel)
+JOIN view_id_mengajar_today using(id_mengajar)
+          where id_guru='$id_guru'";
           $query = mysqli_query($con, $sql);
           $no = 0;
+          //variabel untuk menampung array id_siswa
+          $ids=[];
           while($data = mysqli_fetch_array($query)){
             $no++;
+            //memasukkan setiap loop id_siswa ke dalam variable array $ids
+            array_push($ids, $data['id_siswa']);
             ?>      
 
             <div>
@@ -93,21 +97,31 @@
 <?php 
 // fungsi untuk menonaktifkan tombol simpan,
 // jika tidak ada daftar siswa yang munculs
-if ($data['id_siswa']<=0) {
+
+//mencoba lihat isi variable array $ids
+//print_r($ids);
+
+if (empty($ids)) {
   echo "<p><b>Maaf,</b><br>anda tidak bisa menambahkan presensi saat ini.<br>";
   echo "Silahkan kembali.</p>";
 }
  ?>
               <div class="">
-                <button type="submit" class="btn btn-success disableds"
+                <button type="submit" class="btn btn-success"
 <?php 
 // fungsi untuk menonaktifkan tombol simpan,
 // jika tidak ada daftar siswa yang munculs
-if ($data['id_siswa']<=0) {
+if (empty($ids)) {
   echo "disabled";
 }
  ?>
-                ><i class="fa fa-save"></i> Simpan </button>
+                ><i class="fa fa-save"></i> Simpan ( 
+<?php
+// fungsi menampilkan jumlah siswa
+// yang akan ditambahkan presensinya
+echo count($ids);
+?>
+              )</button>
                 <button type="reset" class="btn btn-warning"><i class="fa fa-eraser"></i> Reset </button>
                 <a class="btn btn-danger" href="?hal=presensi-siswa-view"><i class="fa fa-mail-reply"></i> Batal </a>
               </div>

@@ -14,17 +14,17 @@
     <form action="ceklogin.php" method="post">
       <!-- username -->
     <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Username" name="username">
+        <input type="text" class="form-control" placeholder="Username" name="username" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <!-- password -->
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="password">
+        <input type="password" class="form-control" placeholder="Password" name="password" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <!-- select -->
       <div class="form-group">
-                  <select class="form-control" name="id_role">
+                  <select class="form-control" name="id_role" required>
                   <option value="" > Pilih Role </option>
                     <option value="3" >  Guru  </option>
                     <option value="5" >  Siswa  </option>
