@@ -27,17 +27,17 @@
           <?php
           $id_guru=$_SESSION['id_guru'];
           $sql = "SELECT 
-          siswa.id_siswa,
-          siswa.nama,
-          siswa.nis,
-          siswa.foto,
-          mapel.id_mapel,
-          mapel.nama_mapel,
-          mengajar.id_mengajar
-          from siswa
-          join mapel using(id_kelas)
-          join mengajar using(id_mapel)
-          JOIN view_id_mengajar_today using(id_mengajar)
+siswa.id_siswa,
+siswa.nama,
+siswa.nis,
+siswa.foto,
+mapel.id_mapel,
+mapel.nama_mapel,
+mengajar.id_mengajar
+from siswa
+join mapel using(id_kelas)
+join mengajar using(id_mapel)
+JOIN view_id_mengajar_today using(id_mengajar)
           where id_guru='$id_guru'";
           $query = mysqli_query($con, $sql);
           $no = 0;
@@ -68,31 +68,18 @@
                         <input type="text" name="id_mengajar" value="<?= $data['id_mengajar']?>" hidden>
                         <input type="text" name="id_siswa[]" value="<?= $data['id_siswa'] ?>" hidden>
                         <div class="form-group">
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="id_presensi_<?= $data['id_siswa'] ?>" id="id_presensi<?= $data['id_siswa'] ?>" value="1" > Hadir
-                            </label>
-                          </div>
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="id_presensi_<?= $data['id_siswa'] ?>"  id="id_presensi<?= $data['id_siswa'] ?>" value="2" > Izin
-                            </label>
-                          </div>
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="id_presensi_<?= $data['id_siswa'] ?>"  id="id_presensi<?= $data['id_siswa'] ?>" value="3" > Sakit
-                            </label>
-                          </div>
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="id_presensi_<?= $data['id_siswa'] ?>"  id="id_presensi<?= $data['id_siswa'] ?>" value="4" > Tanpa Keterangan
-                            </label>
-                          </div>
+                          <select class="form-control" name="id_presensi[]" required>
+                            <option value=""> - Pilih Presensi - </option>
+                            <option value="1"> Hadir </option>
+                            <option value="2"> Izin </option>
+                            <option value="3"> Sakit </option>
+                            <option value="4"> Tanpa Keterangan </option>
+                          </select>
                         </div>
                       </li>
                       <li>
                         <div class="form-group">
-                          <textarea class="form-control" name="catatan_<?= $data['id_siswa'] ?>" rows="2" placeholder="Tambahkan keterangan jika siswa tidak masuk!"></textarea>
+                          <textarea class="form-control" name="catatan[]" rows="2" placeholder="Tambahkan keterangan jika siswa tidak masuk!"></textarea>
                         </div>
                       </li>
                     </ul>
@@ -107,34 +94,34 @@
 
 
             <div class="col-md-12 text-center">
-              <?php 
+<?php 
 // fungsi untuk menonaktifkan tombol simpan,
 // jika tidak ada daftar siswa yang munculs
 
 //mencoba lihat isi variable array $ids
 //print_r($ids);
 
-              if (empty($ids)) {
-                echo "<p><b>Maaf,</b><br>anda tidak bisa menambahkan presensi saat ini.<br>";
-                echo "Silahkan kembali.</p>";
-              }
-              ?>
+if (empty($ids)) {
+  echo "<p><b>Maaf,</b><br>anda tidak bisa menambahkan presensi saat ini.<br>";
+  echo "Silahkan kembali.</p>";
+}
+ ?>
               <div class="">
                 <button type="submit" class="btn btn-success"
-                <?php 
+<?php 
 // fungsi untuk menonaktifkan tombol simpan,
 // jika tidak ada daftar siswa yang munculs
-                if (empty($ids)) {
-                  echo "disabled";
-                }
-                ?>
+if (empty($ids)) {
+  echo "disabled";
+}
+ ?>
                 ><i class="fa fa-save"></i> Simpan ( 
-                  <?php
+<?php
 // fungsi menampilkan jumlah siswa
 // yang akan ditambahkan presensinya
-                  echo count($ids);
-                  ?>
-                )</button>
+echo count($ids);
+?>
+              )</button>
                 <button type="reset" class="btn btn-warning"><i class="fa fa-eraser"></i> Reset </button>
                 <a class="btn btn-danger" href="?hal=presensi-siswa-view"><i class="fa fa-mail-reply"></i> Batal </a>
               </div>
@@ -148,4 +135,4 @@
       <!-- /.content -->
 
     </div>
-  <!-- /.content-wrapper -->  
+  <!-- /.content-wrapper -->

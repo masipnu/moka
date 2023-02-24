@@ -1,14 +1,14 @@
 <?php
 
-    $sql="INSERT INTO log_presensi (tgl, id_mengajar, id_siswa, id_presensi, catatan) VALUES";
-    $urut=0;
-    for ($i=0; $i < count($_POST['id_siswa']); $i++) { 
-        $data="('".$_POST['tgl']."','".$_POST['id_mengajar']."','".
-        $_POST['id_siswa'][$i]."',".$_POST['id_presensi'][$i].",'".$_POST['catatan'][$i]."')";
-    $insert=mysqli_query($con,$sql.$data);
-    }    
+   //  $sql="INSERT INTO log_presensi (tgl, id_mengajar, id_siswa, id_presensi, catatan) VALUES";
+   //  $urut=0;
+   //  for ($i=0; $i < count($_POST['id_siswa']); $i++) { 
+   //      $data="('".$_POST['tgl']."','".$_POST['id_mengajar']."','".
+   //      $_POST['id_siswa'][$i]."',".$_POST['id_presensi'][$i].",'".$_POST['catatan'][$i]."')";
+   //  $insert=mysqli_query($con,$sql.$data);
+   //  }    
 
-   if($insert){
+   // if($insert){
 
     ?>
     <div class="content-wrapper">
@@ -27,13 +27,23 @@
                 </div>
                 <!-- /.col -->
           </div>
+          <div class="row">
+              <?php
+              print_r($_POST);
+              echo "<br>";
+            echo $_POST['tgl']."<br>";
+            echo $_POST['id_mengajar']."<br>";
+            echo $_POST['id_siswa'][0]."<br>";
+            echo $_POST['catatan_PD0001']."<br>";
+              ?>
+          </div>    
        </section>
     </div>   
     <?php
 
-      echo "<meta http-equiv='refresh' content='1.5; url=?hal=presensi-siswa-view'>";
-   }else{
-      echo "Tidak dapat menyimpan data!<br>";
-      echo mysqli_error();
-   }
+   //    echo "<meta http-equiv='refresh' content='1.5; url=?hal=presensi-siswa-view'>";
+   // }else{
+   //    echo "Tidak dapat menyimpan data!<br>";
+   //    echo mysqli_error();
+   // }
 ?>
